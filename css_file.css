@@ -1,0 +1,15 @@
+@font-face {
+font-family: 'IBM Plex Mono', monospace;
+
+}
+
+a, h1, h3 {
+	font-family: 'IBM-Plex-Mono', monospace;
+	text-align: center
+}
+
+.feed {
+  margin-left: 3px;
+  padding: 0 0 0 19px;
+  background: url("./img/feed-icon-14x14.png") no-repeat 0 50%;
+}

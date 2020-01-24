@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="demo.xsl"?>
+
+<news>
+  <article>
+    <title>
+    Living in Alan Turing's future
+    </title>
+    <link>
+    http://www.newyorker.com/culture/culture-desk/living-in-alan-turings-future
+    </link>
+    <description>
+    Our culture's thoughts, admirations, and lessons due to Alan Turing.
+    </description>
+  </article>
+    <article>
+    <title>
+    The Ultimate Productivity Hack is Saying No
+    </title>
+    <link>
+    http://jamesclear.com/saying-no
+    </link>
+    <image>
+    <url>http://howlround.com/sites/default/files/styles/body_large/public/1_13.png?itok=GckwgufW</url>
+    <title>Computer Say No</title>
+    <link>http://howlround.com/sites/default/files/styles/body_large/public/1_13.png?itok=GckwgufW</link>
+    </image>
+    <summary>
+    Saying no can sometimes be more responsible to efficiency than saying yes can.
+    </summary>
+    <description>
+    Learning to say no effectively and "upgrading your no" can increase your productivity.
+    </description> 	
+  </article>
+<article>
+    <title>
+    Absolute Success is Luck. Relative Success is Hard Work.
+    </title>
+    <link>
+	http://https://jamesclear.com/luck-vs-hard-work
+    </link>
+    <image>
+      <url>Mangeki Neko</url>
+      <title>Mangeki Neko</title>
+      <link>http://i.pinimg.com/originals/6b/fa/de/6bfade8cf9077bfbd99f66024e1fa4f1.jpg</link>
+    </image>
+    <description>
+    The more wild the the outcome of success, the more luck plays a role.
+    </description>
+  </article>
+
+</news>
