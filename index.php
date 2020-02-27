@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -121,4 +122,68 @@
             </div>
         </div>
     </body>
+=======
+<?php
+$file = 'sources.txt';
+//if the submit named value of the posted form exists and is identified as 'Add Feed', then put the xml content into the file sources.txt 
+if (isset($_POST['submit']) && $_POST['submit'] === 'Add Feed') {
+ //   if(is_writable($_POST['feed_url'])) {
+		$feedUrl = $_POST['feed_url'];	
+		$feedTitle = $_POST['feed_title'];
+		file_put_contents($file, $feedTitle . "," . $feedUrl . "\n", FILE_APPEND);
+//	} else {
+//	echo "File is not an RSS feed.";
+	
+//	}
+}
+libxml_use_internal_errors(true);
+//list of urls
+//read $file into array
+$feedsContent = file($file);
+$feeds = [];
+//for each line in file remove comma from line
+foreach($feedsContent as $line) {
+    //this var contains array with first entry title, and second entry url 
+    $parsed = explode(",", $line);
+    //title array entry
+    $title = $parsed[0];
+    //url array entry
+    $url = $parsed[1];
+    //array, first entry is title and second entry is url
+    $feeds[] = ['title' => $title, 'url' => $url];
+}
+?>
+<html>
+<body>
+<h2>Omni News</h2>
+<?php
+//size of feeds array(5)
+$size = sizeof($feeds);
+//if array has anything in it
+if ($size>0) {
+    //empty to overwrite
+    $html = "";
+    //take each fed url, load the xml document associated, access channel, extract title, put into h3 tags, make a list for each of the urls inside the xml feed
+    foreach($feeds as $feed) {
+        $entry = simplexml_load_file(trim($feed['url']));
+        $entry = $entry->channel;
+        $title = $feed['title'];
+    $html .= '<h3>'.$title.'</h3>';
+    $html .= '<ul>';
+        foreach($entry->item as $entry) {$html .= '<li><a href = "'. htmlspecialchars($entry->link) .'">'.htmlspecialchars($entry->title).'</a></li>';
+        }    
+    $html .= '</ul>';
+    }
+    echo $html;
+} else {
+    echo "There are no feeds to display. Please add one using the form below.";
+}
+?>
+<form name='feeds' method='post' action="<?php echo $_SERVER['PHP_SELF'];?>">
+title: <input type='text' name='feed_title' value=''>
+<br />
+url: <input type='text' name='feed_url' value=''>
+<input type='submit' name='submit' value='Add Feed'></form>
+</body>
+>>>>>>> new feature - add feed
 </html>

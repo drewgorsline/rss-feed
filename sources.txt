@@ -1,0 +1,7 @@
+New York Times,https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml
+Techmeme,https://www.techmeme.com/feed.xml
+ESPN Top Headlines,https://www.espn.com/espn/rss/news
+aljazeera,http://aljazeera.com/xml/rss/all.xml 
+BBC,http://feeds.bbci.co.uk/news/world/rss.xml
+CBS,https://www.cbsnews.com/latest/rss/us
+Los Angeles Times,https://www.latimes.com/business/technology.rss
